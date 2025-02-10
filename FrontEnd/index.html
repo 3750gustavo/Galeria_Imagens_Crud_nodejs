@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h1 class="display-4">Galeria de Imagens</h1>
+            <button class="btn btn-primary mr-2" data-toggle="modal" data-target="#galleryModal">
+                Abrir Galeria
+            </button>
+            <button class="btn btn-success" data-toggle="modal" data-target="#uploadModal">
+                Novo Upload
+            </button>
+        </div>
+
+        <!-- Viewer de Imagem -->
+        <div id="image-viewer" class="text-center" style="display: none;">
+            <div class="position-relative d-inline-block">
+                <img id="main-image" class="img-fluid rounded shadow-lg" style="max-height: 70vh;">
+                <button id="close-viewer" class="btn btn-danger btn-sm position-absolute" style="top: 10px; right: 10px;">
+                    &times;
+                </button>
+                <div class="controls mt-3">
+                    <button id="prev-btn" class="btn btn-primary btn-lg">❮</button>
+                    <button id="random-btn" class="btn btn-info btn-lg mx-2">●</button>
+                    <button id="next-btn" class="btn btn-primary btn-lg">❯</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal da Galeria -->
+        <div class="modal fade" id="galleryModal" tabindex="-1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Selecione uma Imagem</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="image-grid" class="row"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Upload -->
+        <div class="modal fade" id="uploadModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Upload de Nova Imagem</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="upload-form">
+                            <div class="custom-file mb-3">
+                                <input type="file" class="custom-file-input" id="image-input" accept="image/*" required>
+                                <label class="custom-file-label" for="image-input">Selecione a imagem...</label>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
