@@ -28,6 +28,8 @@ O servidor será iniciado na porta 3000 em todos os endereços de IP da sua máq
 
 Você pode copiar a pasta Frontend para o seu celular ou dispositivo que quiser testar a interface.
 
+**no arquivo script.js troque o ip na primeira linha pelo seu pc onde estiver rodando o servidor**
+
 Os arquivos são:
 
 * index.html
