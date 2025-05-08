@@ -1,3 +1,5 @@
+// Script para o frontend do servidor de imagens
+
 // troque 192.168.0.120 pelo endereco ip onde esta rodando o server
 const apiBaseUrl = 'http://192.168.0.120:3000/images';
 let currentImageIndex = 0;

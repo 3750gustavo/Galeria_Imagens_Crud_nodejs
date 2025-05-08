@@ -1,3 +1,7 @@
+// Arquivo: server.js
+// Diretório: /Backend
+// Responsável por hospedar tanto o front quanto o back-end da aplicação, é a "alma" do negócio, onde tudo acontece.
+
 const express = require('express');
 const multer = require('multer');
 const fs = require('fs');
@@ -46,6 +50,7 @@ const upload = multer({
 
 // Middleware para servir arquivos estáticos
 app.use('/images', express.static(imagesDir));
+app.use(express.static(path.join(__dirname, '../FrontEnd'))); // server index.html da pasta FrontEnd
 
 // Rota para listar imagens
 app.get('/images', (req, res) => {
