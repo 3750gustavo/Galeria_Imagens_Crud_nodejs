@@ -18,9 +18,19 @@ Este é um projeto simples de uma galeria de imagens que permite:
 ### Backend
 
 1. Clone este repositório
-2. Acesse a pasta backend
-3. Execute `npm ci` para instalar as dependências
-4. Execute `node server.js`
+2. Acesse a pasta Backend (`cd Backend`)
+3. Instale as dependências:
+    ```bash
+    npm ci
+    ```
+    se estiver na raiz do projeto, use:
+    ```bash
+    npm ci --prefix Backend
+    ```
+4. Execute `node server.js` se estiver dentro da pasta Backend, ou use:
+    ```bash
+    node Backend/server.js
+    ```
 
 O servidor será iniciado na porta 3000 em todos os endereços de IP da sua máquina (pode hostear no seu pc e acessar pelo celular por exemplo).
 
@@ -54,7 +64,7 @@ Não há autenticação ou autorização, qualquer pessoa que acessar o endereç
 Além disso, os arquivos são armazenados diretamente no disco do servidor, o que pode ser ineficiente para um grande número de imagens.
 
 ## Autor
-- Gustavo Rossoni Corrêa De Barros
+Gustavo Rossoni Corrêa De Barros
 
 ## Licença
 Este projeto foi lançado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
