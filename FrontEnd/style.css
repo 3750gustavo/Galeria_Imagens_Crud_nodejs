@@ -11,11 +11,16 @@ body {
     background: rgba(0,0,0,0.9);
     padding: 20px;
     border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 50vh;
 }
 
 #image-viewer img {
     max-width: 90vw;
     max-height: 80vh;
+    object-fit: contain;
 }
 
 .thumbnail-card {
